@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>虎嗅网</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/kkpager.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/kkpager_blue.css" />
+</head>
+<body >
+<div style="width:800px;margin:0 auto;">
+<div id="kkpager"></div>
+</div>
+<script type="text/javascript">
+
+//init
+$(function(){
+	var totalPage = 20;//总页数
+	var pageNo =1;//当前第几页
+	
+	//生成分页
+	kkpager.generPageHtml({
+		//当前第几页
+		pno : pageNo,
+		//总页码
+		total : totalPage,
+		mode : 'click',//默认值是link，可选link或者click
+		click : function(n){
+			// do something
+			//手动选中按钮
+			alert(n);
+			this.selectPage(n);
+			return false;
+		}
+		
+		,lang				: {
+			firstPageText			: '首页',
+			firstPageTipText		: '首页',
+			lastPageText			: '尾页',
+			lastPageTipText			: '尾页',
+			prePageText				: '上一页',
+			prePageTipText			: '上一页',
+			nextPageText			: '下一页',
+			nextPageTipText			: '下一页',
+			totalPageBeforeText		: '共',
+			totalPageAfterText		: '页',
+			currPageBeforeText		: '当前第',
+			currPageAfterText		: '页',
+			totalInfoSplitStr		: '/',
+			totalRecordsBeforeText	: '共',
+			totalRecordsAfterText	: '条数据',
+			gopageBeforeText		: '&nbsp;转到',
+			gopageButtonOkText		: '确定',
+			gopageAfterText			: '页',
+			buttonTipBeforeText		: '第',
+			buttonTipAfterText		: '页'
+		}
+
+	});
+});
+</script>
+</body>
+</html>

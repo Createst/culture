@@ -1,0 +1,15 @@
+d:\my documents\my documents\visual studio 2010\Projects\WebApplication1\WebApplication1\bin\WebApplication1.dll
+d:\my documents\my documents\visual studio 2010\Projects\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+d:\my documents\my documents\visual studio 2010\Projects\WebApplication1\WebApplication1\obj\Debug\ResolveAssemblyReference.cache
+d:\my documents\my documents\visual studio 2010\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+d:\my documents\my documents\visual studio 2010\Projects\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\wwwroot\2013\cfsms\code\webservice\doc_demo\DEMO\NET4.0\WebApplication1\bin\WebApplication1.dll
+D:\wwwroot\2013\cfsms\code\webservice\doc_demo\DEMO\NET4.0\WebApplication1\bin\WebApplication1.pdb
+D:\wwwroot\2013\cfsms\code\webservice\doc_demo\DEMO\NET4.0\WebApplication1\obj\Debug\WebApplication1.dll
+D:\wwwroot\2013\cfsms\code\webservice\doc_demo\DEMO\NET4.0\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\wwwroot\2013\cfsms\code\webservice\doc_demo\DEMO\NET4.0\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+D:\wwwroot\2013\cfsms\code\upload\file\DEMO\NET4.0\WebApplication1\bin\WebApplication1.dll
+D:\wwwroot\2013\cfsms\code\upload\file\DEMO\NET4.0\WebApplication1\bin\WebApplication1.pdb
+D:\wwwroot\2013\cfsms\code\upload\file\DEMO\NET4.0\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+D:\wwwroot\2013\cfsms\code\upload\file\DEMO\NET4.0\WebApplication1\obj\Debug\WebApplication1.dll
+D:\wwwroot\2013\cfsms\code\upload\file\DEMO\NET4.0\WebApplication1\obj\Debug\WebApplication1.pdb

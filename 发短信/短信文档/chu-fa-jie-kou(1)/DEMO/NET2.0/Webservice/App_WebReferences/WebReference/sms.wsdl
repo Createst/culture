@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://121.199.16.178/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://121.199.16.178/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://121.199.16.178/">
+      <s:element name="Submit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="content" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitResult" type="tns:SubmitResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SubmitResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="msg" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="smsid" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="newpassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult" type="tns:ChangePasswordResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ChangePasswordResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="msg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNumResult" type="tns:GetNumResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetNumResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="msg" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="num" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VersionInfo">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="VersionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VersionInfoResult" type="tns:VersionInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VersionInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="msg" type="s:srting" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SubmitSoapIn">
+    <wsdl:part name="parameters" element="tns:Submit" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpGetIn">
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpGetOut">
+    <wsdl:part name="Body" element="tns:SubmitResult" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpPostIn">
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpPostOut">
+    <wsdl:part name="Body" element="tns:SubmitResult" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetIn">
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="newpassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:ChangePasswordResult" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostIn">
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="newpassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:ChangePasswordResult" />
+  </wsdl:message>
+  <wsdl:message name="GetNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNum" />
+  </wsdl:message>
+  <wsdl:message name="GetNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNumHttpGetIn">
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNumHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetNumResult" />
+  </wsdl:message>
+  <wsdl:message name="GetNumHttpPostIn">
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNumHttpPostOut">
+    <wsdl:part name="Body" element="tns:GetNumResult" />
+  </wsdl:message>
+  <wsdl:message name="VersionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:VersionInfo" />
+  </wsdl:message>
+  <wsdl:message name="VersionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:VersionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="VersionInfoHttpGetIn" />
+  <wsdl:message name="VersionInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:VersionInfoResult" />
+  </wsdl:message>
+  <wsdl:message name="VersionInfoHttpPostIn" />
+  <wsdl:message name="VersionInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:VersionInfoResult" />
+  </wsdl:message>
+  <wsdl:portType name="smsSoap">
+    <wsdl:operation name="Submit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">提交短信:&lt;br&gt;参数说明:&lt;br&gt;account:账号&lt;br&gt;password:密码&lt;br&gt;mobile:手机号码&lt;br&gt;content:短信内容</wsdl:documentation>
+      <wsdl:input message="tns:SubmitSoapIn" />
+      <wsdl:output message="tns:SubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改短信账号密码:&lt;br&gt;参数说明:&lt;br&gt;account:账号&lt;br&gt;password:旧密码&lt;br&gt;newpassword:新密码</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询账户余额:&lt;br&gt;参数说明:&lt;br&gt;account:查询用户名&lt;br&gt;password:查询用户密码</wsdl:documentation>
+      <wsdl:input message="tns:GetNumSoapIn" />
+      <wsdl:output message="tns:GetNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VersionInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">版本信息,仅用于提示:&lt;br&gt;参数说明:</wsdl:documentation>
+      <wsdl:input message="tns:VersionInfoSoapIn" />
+      <wsdl:output message="tns:VersionInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="smsHttpGet">
+    <wsdl:operation name="Submit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">提交短信:&lt;br&gt;参数说明:&lt;br&gt;account:账号&lt;br&gt;password:密码&lt;br&gt;mobile:手机号码&lt;br&gt;content:短信内容</wsdl:documentation>
+      <wsdl:input message="tns:SubmitHttpGetIn" />
+      <wsdl:output message="tns:SubmitHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改短信账号密码:&lt;br&gt;参数说明:&lt;br&gt;account:账号&lt;br&gt;password:旧密码&lt;br&gt;newpassword:新密码</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordHttpGetIn" />
+      <wsdl:output message="tns:ChangePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询账户余额:&lt;br&gt;参数说明:&lt;br&gt;account:查询用户名&lt;br&gt;password:查询用户密码</wsdl:documentation>
+      <wsdl:input message="tns:GetNumHttpGetIn" />
+      <wsdl:output message="tns:GetNumHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VersionInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">版本信息,仅用于提示:&lt;br&gt;参数说明:</wsdl:documentation>
+      <wsdl:input message="tns:VersionInfoHttpGetIn" />
+      <wsdl:output message="tns:VersionInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="smsHttpPost">
+    <wsdl:operation name="Submit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">提交短信:&lt;br&gt;参数说明:&lt;br&gt;account:账号&lt;br&gt;password:密码&lt;br&gt;mobile:手机号码&lt;br&gt;content:短信内容</wsdl:documentation>
+      <wsdl:input message="tns:SubmitHttpPostIn" />
+      <wsdl:output message="tns:SubmitHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改短信账号密码:&lt;br&gt;参数说明:&lt;br&gt;account:账号&lt;br&gt;password:旧密码&lt;br&gt;newpassword:新密码</wsdl:documentation>
+      <wsdl:input message="tns:ChangePasswordHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询账户余额:&lt;br&gt;参数说明:&lt;br&gt;account:查询用户名&lt;br&gt;password:查询用户密码</wsdl:documentation>
+      <wsdl:input message="tns:GetNumHttpPostIn" />
+      <wsdl:output message="tns:GetNumHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VersionInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">版本信息,仅用于提示:&lt;br&gt;参数说明:</wsdl:documentation>
+      <wsdl:input message="tns:VersionInfoHttpPostIn" />
+      <wsdl:output message="tns:VersionInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="smsSoap" type="tns:smsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Submit">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/Submit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNum">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/GetNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionInfo">
+      <soap:operation soapAction="http://schemas.xmlsoap.org/VersionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="smsSoap12" type="tns:smsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Submit">
+      <soap12:operation soapAction="http://schemas.xmlsoap.org/Submit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://schemas.xmlsoap.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNum">
+      <soap12:operation soapAction="http://schemas.xmlsoap.org/GetNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionInfo">
+      <soap12:operation soapAction="http://schemas.xmlsoap.org/VersionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="smsHttpGet" type="tns:smsHttpGet">
+    <http:binding verb="GET" />
+    <http:binding verb="GET" />
+    <http:binding verb="GET" />
+    <http:binding verb="GET" />
+    <wsdl:operation name="Submit">
+      <http:operation location="http://schemas.xmlsoap.org/Submit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="http://schemas.xmlsoap.org/ChangePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNum">
+      <http:operation location="http://schemas.xmlsoap.org/GetNum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionInfo">
+      <http:operation location="http://schemas.xmlsoap.org/VersionInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="smsHttpPost" type="tns:smsHttpPost">
+    <http:binding verb="POST" />
+    <http:binding verb="POST" />
+    <http:binding verb="POST" />
+    <http:binding verb="POST" />
+    <wsdl:operation name="Submit">
+      <http:operation location="http://schemas.xmlsoap.org/Submit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="http://schemas.xmlsoap.org/ChangePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNum">
+      <http:operation location="http://schemas.xmlsoap.org/GetNum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersionInfo">
+      <http:operation location="http://schemas.xmlsoap.org/VersionInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="sms">
+    <wsdl:port name="smsSoap" binding="tns:smsSoap">
+      <soap:address location="http://121.199.16.178/webservice/sms.php?smsService" />
+    </wsdl:port>
+    <wsdl:port name="smsSoap12" binding="tns:smsSoap12">
+      <soap12:address location="http://121.199.16.178/webservice/sms.php?smsService" />
+    </wsdl:port>
+    <wsdl:port name="smsHttpGet" binding="tns:smsHttpGet">
+      <http:address location="http://121.199.16.178/webservice/sms.php?smsService" />
+    </wsdl:port>
+    <wsdl:port name="smsHttpPost" binding="tns:smsHttpPost">
+      <http:address location="http://121.199.16.178/webservice/sms.php?smsService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,18 @@
+public String hyList(Integer pageNow,Model model){
+
+        if(null == pageNow)
+        {
+            pageNow = 1;
+        }
+        List<HyInfo> hyInfoList = hyInfoService.list();//查询所有记录
+        //分页
+        Pager<HyInfo> pager = new Pager<>(hyInfoList,8);
+        //得到当前页的列表
+        List<HyInfo>  arrayList = pager.getPage(pageNow);
+        //得到总共页数
+        int pageCount = pager.getPageCount();
+        model.addAttribute("pagecount",pageCount);
+        model.addAttribute("pagenow",pageNow);
+        model.addAttribute("hyinfo",arrayList);
+        return "hy.list";
+    }
