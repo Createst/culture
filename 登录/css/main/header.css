@@ -1,0 +1,80 @@
+*{margin:0px;padding:0px;}
+a{
+    text-decoration: none!important;
+}
+.container{
+    width: 1190px!important;
+}
+.container-fluid{
+    padding: 0px;
+}
+
+#logotop{
+    height:20px;
+    background: #f5f5f5;
+    min-width: 1190px;
+    border-bottom: 1px solid #ededed;
+    font-size: 12px;
+}
+@media (min-width: 1px){
+ .nav-justified>li {
+        display: table-cell;
+        width: 1%;
+    }
+    .nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+#logobg{
+    min-width: 1190px;
+    height: 80px;
+    background: url(../../images/logo_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+#logo{
+    height: 80px;
+
+}
+#logo .col-xs-1 img{
+    vertical-align: top;
+    margin-top: 11px;
+}
+#logo .col-xs-6{
+    line-height: 80px;
+    padding-left: 0px;
+}
+#logo .col-xs-6 span{
+    font-size: 30px;
+    color: #169ccc;
+    font-weight: bold;
+
+}
+/*#nav li{
+    border-left:1px solid #5AAEE5;
+    -webkit-box-shadow: 0px 0px 4px -1px black;
+    -ms-box-shadow:0px 0px 4px -1px black;
+    -o-box-shadow: 0px 0px 4px -1px black;
+    -moz-box-shadow: 0px 0px 4px -1px black;
+    box-shadow: 0px 0px 4px -1px black;
+}*/
+#nav li a:hover{
+    background-color: white;
+    color: #428BCA;
+}
+
+#nav li a{
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+#nva-bg{
+    min-width: 1190px;
+    background-color: #428BCA;
+}
+#header-nav{
+    padding: 0px;
+
+}

@@ -1,0 +1,113 @@
+.container-fluid{
+	 min-width: 1190px;
+	 padding: 0px;
+}
+
+/*top*/
+.register-box{
+    margin: 0px -15px 0px -15px;
+    box-shadow: 0px 2px 4px 0px #ccc;
+    -webkit-box-shadow: 0px 2px 4px 0px #ccc;
+    -moz-box-shadow: 0px 2px 4px 0px #ccc;
+}
+.register-top{
+    width: 1190px;
+    height: 80px;
+
+}
+
+.register-top .col-xs-1 img{
+    vertical-align: top;
+    margin-top: 11px;
+}
+.register-top .col-xs-6{
+    line-height: 80px;
+    padding-left: 0px;
+}
+.register-top .col-xs-6 span{
+    font-size: 30px;
+    color: #169ccc;
+    font-weight: bold;
+
+}
+/*center*/
+.register-center{
+    height: 600px;
+    width: 1190px;
+    border: 1px solid #ccc;
+    margin-top: 40px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.register-center .header{
+    height: 62px;
+    background: #ebebeb;
+    line-height: 62px;
+}
+.register-center .header span:first-child{
+    font-family: "微软雅黑";
+    font-size: 22px;
+    color: #333;
+    margin-left: 28px;
+}
+.register-center .header span:last-child{
+    font-size: 14px;
+    color: #333;
+    margin-left: 825px;
+}
+.register-center .header span:last-child a{
+    color: #169ccc;
+}
+
+/**/
+
+.register-input{
+    margin-bottom: 25px;
+}
+.form-control{
+    height: 40px;
+}
+.form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.pswinfo{
+    display: block;
+    height: 34px;
+    font-size: 10px;
+    color: red;
+    line-height: 34px;
+}
+.pswinfo2{
+    color: greenyellow;
+    margin: 10px 0 0 10px;
+    font-size: 16px;
+}
+#scode{
+    width: 183px;
+    height: 40px;
+    background: #ededed;
+}
+.register-submit{
+    width: 406px;
+    height: 50px;
+    color: white;
+    line-height: 38px;
+    text-align: center;
+    font-size: 22px;
+    margin-left: -15px;
+    font-weight: bold;
+}
+/**/
+#footer2{
+    height:300px;
+    padding:100px 0 0 0;
+    font-size: 12px;
+    color: #808080;
+}
+#footer2 p:first-child a{
+    color: #808080;
+}

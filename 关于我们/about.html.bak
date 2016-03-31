@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>忘记密码</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/main/header.css"/>
+<!--     <link type="text/css" rel="stylesheet" href="css/about/booklist.css"/> -->
+<!--     <link type="text/css" rel="stylesheet" href="css/about/about.css"/> -->
+<!--     <link type="text/css" rel="stylesheet" href="css/main/footer.css"/> -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!------------------------------------------------------------------------------------------------------头-->
+<!--<%&#45;&#45;关于我们&#45;&#45;%>-->
+<div class="container-fluid" id="logotop" >
+    <div class=" container center-block" >
+        <ul class="list-unstyled list-inline pull-left" style="margin:0px;">
+            <li style="padding: 0px;color: #737373;" id="header-time">你好，欢迎访问镇江文化馆！2016年1月1日 </li>
+        </ul>
+        <ul class="list-unstyled list-inline pull-right" style="margin:0px;">
+            <li class="text-center" style="padding: 0px;">
+                <a href="#" style="color: #fe7440;">请登录</a>&nbsp;|
+            </li>
+            <li class="text-center" style="padding: 0px;"><a href="#" >免费注册</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container-fluid" id="logobg">
+    <div class="container">
+        <div class="row" id="logo">
+            <div class="col-xs-1" >
+                <a href="#"><img src="images/logo.jpg"/></a>
+            </div>
+            <div class="col-xs-6">
+                <span>镇江市文化馆数字化互动平台</span>
+            </div>
+            <div class="col-xs-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="nva-bg">
+    <div class="container" id="header-nav">
+        <ul class="nav nav-pills nav-justified" id="nav">
+            <li class="active"><a href="#">首页</a></li>
+            <li class="active"><a href="#">汇演</a></li>
+            <li class="active"><a href="#">互动点播</a></li>
+            <li class="active"><a href="#">数字展厅</a></li>
+            <li class="active"><a href="#">远程辅导</a></li>
+            <li class="active"><a href="#">阅读空间</a></li>
+            <li class="active"><a href="#">关于</a></li>
+        </ul>
+    </div>
+</div>
+ <!---------------------------------------------------------------------------------------------------中间-->
+<!--  -->
+<!-- <section class="container" style="height:707px;padding: 0px;background: white;"> -->
+<!--     -->
+<!--     <div class="container" id="booklistpath"> -->
+<!--         <ul class="breadcrumb"> -->
+<!--             <li>当前位置：</li> -->
+<!--             <li id="bkl2"><a href="#" >首页</a></li> -->
+<!--             <li class="active" id="bkl">关于我们</li> -->
+<!--         </ul> -->
+<!--     </div> -->
+<!--      -->
+<!--     <div class="container"> -->
+<!--         <div class="row"> -->
+<!--             <div class="col-xs-1"> -->
+<!--             </div> -->
+<!--             <div class="col-xs-2"> -->
+<!--  -->
+<!--                 <div> -->
+<!--                     <ul class="list-unstyled about-nav"> -->
+<!--                         <li class="active2"><a href="#aboutme">关于我们</a></li> -->
+<!--                         <li><a href="#callme">联系我们</a></li> -->
+<!--                         <li><a href="#question">常见问题</a></li> -->
+<!--                     </ul> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--             <div class="col-xs-9" style="position: relative;" id="showme"> -->
+<!--                 <div id="aboutme"> -->
+<!--                     <p class="aboutme">关于我们</p> -->
+<!--                     <div id="aboutimg"> -->
+<!--                         <img src="images/me.png"> -->
+<!--                     </div> -->
+<!--                     <div id="atext"> -->
+<!--                         <p> -->
+<!--                             镇江“淘文化”网是镇江市文化广电新闻出版局为服务大众提供的公共文化产品和服务社会化运作平台。 -->
+<!--                         </p> -->
+<!--                         <p> -->
+<!--                             公共文化产品和服务社会化平台建设，是我市认真贯彻党的十八届三中全会和国务院办公厅《关于做好政府向社会力量购买公共文化服务工作的意见》精神，建立健全政府向社会购买公共文化服务机制，完善公共文化服务供给体系，进一步拓宽文化惠民活动覆盖面，推动公共文化服务社会化发展的一项重要举措，积极推进文化惠民，改善文化民生的一项惠民工程。 -->
+<!--                         </p> -->
+<!--                         <p> -->
+<!--                             交易平台的建设，也是公共文化活动与现代互联网的对接，使公共文化服务深入扎根于社会文化的土壤之中，形成全社会对公共文化服务需求与建设的充分表达和孵化平台。力求打造成为江苏省首个网络公共文化产品平台和服务社会化运作平台。 -->
+<!--                         </p> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--                 <div  id="callme"> -->
+<!--                     <p class="aboutme">联系我们</p> -->
+<!--                     <div class="aaddress"> -->
+<!--                         <p><span>联系电话：0511-84447373</span><span>联系地址：镇江市解放路17号</span></p> -->
+<!--                         <p><span>联系部门：镇江市图书馆信息技术部</span><span>联系邮箱：zjtaowenhua@sina.com</span></p> -->
+<!--                         <p><span>上班时间：周一至周五 上午9：00-11:30 下午14:00-18:00</span></p> -->
+<!--                     </div> -->
+<!--                     <div class="dt"> -->
+<!--                         <img src="images/dt.png"> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--                 <div id="question"> -->
+<!--                     <p class="aboutme">常见问题</p> -->
+<!--                     <div class="qcontent"> -->
+<!--                         <div class="panel-group" id="accordion"> -->
+<!--                             <div class="panel panel-default"> -->
+<!--                                 <div class="panel-heading"> -->
+<!--                                     <h4 class="panel-title"> -->
+<!--                                         <a href="#collapseOne" data-toggle="collapse" -->
+<!--                                            data-parent="#accordion">支持哪些支付方式？</a> -->
+<!--                                     </h4> -->
+<!--                                 </div> -->
+<!--                                 <div id="collapseOne" class="panel-collapse collapse"> -->
+<!--                                     <div class="panel-body"> -->
+<!--                                         <p class="qtext">活动中心本部：昭庆寺里街22号；杭州市青少年发展中心：钱江新城市民中心K楼；城西分中心：又名金成少年宫，余杭区荆余路518号、毗邻天目山西路上和路口；城北分中心：又名杭州青少年文化创意培训中心，拱墅区小河路334号杭州工美馆四楼。</p> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
+<!--                             </div> -->
+<!--  -->
+<!--  -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </div> -->
+<!-- </section> -->
+<!-- <footer class="container text-center" id="foot" > -->
+<!--     <p><a href="#">关于我们</a> |<a href="#"> 联系方式</a> | <a href="#">常见问题</a></p> -->
+<!--     <p>版权所有：镇江市文化广电新闻出版局  苏ICP备1502128</p> -->
+<!--     <p>技术支持：江苏泽本信息有限公司</p> -->
+<!-- </footer> -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<!-- <script type="text/javascript" src="js/about.js"></script> -->
+</body>
+</html>

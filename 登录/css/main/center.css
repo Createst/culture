@@ -1,0 +1,234 @@
+/*图片轮播*/
+li{list-style:none;}
+.con{height:360px;position:relative;}
+.con .content{width:1190px;height:100%;overflow: hidden;}
+.con .content ul{width:8000px;height:360px;}
+.con .content ul li{width:1190px;height:360px;float:left;}
+
+nav{width:180px;height:40px;position:absolute;left:0px;right:0px;margin:0 auto;bottom:10px;z-index:20;}
+nav ul{width:200px;}
+nav ul li{float:left;width:20px;height:20px;border:2px white solid;color:black;text-decoration:none;text-align:center;border-radius:10px;background:#00ff00;cursor:pointer;margin-right:5px;}
+
+.nshow{background:white;border:2px #00ff00 solid;}
+.left,.right{width:60px;height:100%;background:rgba(255,255,255,.0);position:absolute;z-index:20;top:0px;text-align:center;font-size:32px;color:rgba(255,255,255,.0);cursor:pointer;}
+.left{left:0px;}
+.right{right:0px;}
+.left span{display:block;margin-top:140px;}
+.right span{display:block;margin-top:140px;}
+
+#interactive{
+    height:264px;
+    position: relative;
+
+}
+
+.shadow{
+    width:378px;
+    height:264px;
+    position: absolute;
+    left: 15px;
+    top:0px;
+    /*background: rgba(0,0,0,.3);*/
+    text-align: center;
+}
+.shadow span{
+    font-size:38px;
+    color: white;
+    line-height: 264px;
+}
+.title{
+    position: absolute;
+    left: 15px;
+    bottom:0px;
+    height:30px;
+    width: 378px;
+    line-height: 30px;
+    background: rgba(0,0,0,.4);
+}
+.title a{
+    color: white;
+}
+.title a:hover{
+    text-decoration: underline!important;
+}
+#moreinter{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+}
+/*汇演*/
+
+#perform{
+    height:264px;
+    padding-left: 30px;
+}
+#hy-title{
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+#hy-more,#zt-more,#yd-more{
+    color: #333;
+}
+#hy-more:hover,#zt-more:hover,#yd-more:hover{
+    color: #428BCA;
+}
+
+.perform-info li{
+    height:38px;
+
+}
+
+.digital-list li p ,.perform-info li p{
+    color: #666;
+    font-family: "宋体";
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.perform-info li p{
+    margin-bottom: 0px;
+    height:38px;
+    line-height: 38px;
+
+}
+.perform-info li{
+    border-bottom: 1px solid #f0f0f0;
+}
+.perform-info li:first-child{
+    margin-top: 3px;
+}
+.perform-title{
+    width:437px;
+    float: left;
+}
+.perform-address{
+    width:142px;
+    float: left;
+}
+.perform-time{
+    width:122px;
+    float: right;
+}
+.perform-title a{
+    color: black;
+}
+.digital-list li p a:hover,.perform-title a:hover{
+    color: #428BCA;
+    text-decoration: underline!important;
+}
+/*数字展厅*/
+.digital{
+    height: 39px;
+    background: url(../../images/ztbg.jpg);
+    border-top: 1px solid  #428BCA;
+}
+.digital p{
+    height: 100%;
+    line-height: 39px;
+}
+.digital p:first-child{
+    width:300px;
+
+    font-size: 16px;
+}
+.digital p:last-child{
+    width:60px;
+
+}
+
+.digital-list li:first-child{
+    margin-top: 15px;
+}
+.digital-list li p:first-child{
+
+}
+.digital-list li p a{
+    color: black;
+}
+.digital-list2 li:first-child{
+    margin-top: 0px;
+}
+
+.btn-player{
+    width:225px;
+    height:56px;
+    line-height: 50px;
+    font-size: 26px;
+    border-radius: 0px;
+    padding: 0px;
+    background-color: #159ccc;
+    border:1px solid #159ccc;
+    color: white;
+}
+.btn-digital{
+    background-color: #efb11b;
+    border:1px solid #efb11b;
+    color: white;
+}
+.btn-player img{
+    margin-right: 10px;
+}
+.digital-list3{
+    margin-top: 10px;
+}
+.digital-list3 li{
+    position: relative;
+}
+.digital-list3 li .count{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #0042cc;
+}
+/*.digital-list3 li p{
+    border-bottom: dotted 1px #eee;
+}*/
+
+/*阅读空间*/
+#yd-list li{
+    width: 150px;
+    height: 83px;
+    float: left;
+
+    margin: 9px 9px 40px 21px;
+}
+.yd-img{
+    width: 60px;
+    height: 82px;
+
+}
+.yd-info{
+    width:80px;
+    height: 82px;
+
+}
+.yd-info p{
+    color: #333;
+    font-size: 12px;
+}
+.yd-info p:first-child{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 6px;
+}
+.yd-info p:first-child a{
+    color: #666;
+    font-weight: bold;
+}
+.yd-info p:first-child a:hover{
+    color: #428BCA;
+    text-decoration: underline!important;
+}
+.hot-yd{
+    height: 39px;
+    background: url(../../images/ztbg.jpg);
+    color: #169ccc;
+    padding-left: 10px;
+    line-height: 39px;
+}

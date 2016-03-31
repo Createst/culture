@@ -1,0 +1,68 @@
+.container-fluid{
+	min-width:1190px;
+}
+
+.login-top{
+    width: 1190px;
+    height: 80px;
+}
+
+.login-top .col-xs-1 img{
+    vertical-align: top;
+    margin-top: 11px;
+}
+.login-top .col-xs-6{
+    line-height: 80px;
+    padding-left: 0px;
+}
+.login-top .col-xs-6 span{
+    font-size: 30px;
+    color: #169ccc;
+    font-weight: bold;
+
+}
+
+#login-bg{
+	height:600px;
+	background:url(images/login_bg.jpg) no-repeat;
+	background-size: 100% 100%; 
+}
+
+
+#login-cen{
+    width:286px;
+    height:383px;
+    background: rgba(255,255,255,.4);
+    margin-top: 96px;
+}
+#login-cen p:first-child{
+    height:90px;
+    font-size: 26px;
+    font-weight: bolder;
+    line-height: 90px;
+    text-align: center;
+}
+ #login-cen .input-name{
+     width:200px;
+ }
+#login-cen #login-btn{
+    margin-top: 20px;
+}
+#login-cen #login-foot{
+    margin-top: 30px;
+}
+
+.btn-width{
+    width:200px;
+}
+
+#foot{
+    height:300px;
+    background:#F6F6F6;
+    padding:30px 0 0 0;
+    font-size: 12px;
+    color: #808080;
+}
+#foot p:first-child a{
+    color: #808080;
+}

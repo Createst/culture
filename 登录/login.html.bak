@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>镇江文化馆前台系统</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/login/login.css"/>
+
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid" style="min-width: 1190px;">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="center-block login-top">
+                <div class="col-xs-1">
+                    <a href="#"><img src="images/logo.jpg"/></a>
+                </div>
+                <div class="col-xs-6">
+                    <span>镇江市文化馆数字化互动平台</span>
+                </div>
+                <div class="col-xs-3" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<%&#45;&#45;中间&#45;&#45;%>-->
+    <div class="row"
+         style="height:600px;background:url(images/login_bg.jpg) no-repeat;background-size: 100% 100%; ">
+        <div class="col-xs-7">
+        </div>
+        <div class="col-xs-5">
+            <div id="login-cen">
+                <p>会员登录</p>
+
+                <form action="#" method="post" onsubmit=" return loginVerify();">
+                    <div class="center-block input-name">
+                        <div class="input-group">
+                            <span class="input-group-addon input-prefix"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" id="uname" name="username" placeholder="请输入手机号" 
+                                   style="height:38px;">
+                        </div>
+                    </div>
+                    <div class="center-block input-name" style="margin-top: 20px;">
+                        <div class="input-group">
+                            <span class="input-group-addon input-prefix"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" class="form-control" id="psw" name="password" placeholder="请输入密码"
+                                   style="height:38px;">
+                        </div>
+                    </div>
+
+                    <div class="center-block input-name" style="margin-top: 10px;">
+                        <div class="checkbox pull-left" style="width: 100px;">
+                            <label>
+                                <input type="checkbox" name="nameflag" value="yes" id="repsw"/>记住用户名
+                            </label>
+                        </div>
+                        <div class="pull-right" style="margin-top: 10px;">
+                            <a href="#">忘记密码</a>
+                        </div>
+                    </div>
+                    <div id="login-btn" class="text-center">
+                        <input type="submit" class="btn btn-primary btn-width" value="登录"/>
+                    </div>
+                </form>
+                <div id="login-foot" class="text-center">
+                    还没有账号？<a href="">立即注册</a>
+                </div>
+                <p id="alertinfo" class="text-danger text-center">
+
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <!--<%&#45;&#45;底部&#45;&#45;%>-->
+    <div class="row" style="background-color: #f6f6f6;">
+        <div class="col-xs-12">
+            <div id="foot" class="text-center">
+                <p><a href="#">关于我们</a> |<a href="#"> 联系方式</a> | <a href="#">常见问题</a></p>
+                <p>版权所有：镇江市文化广电新闻出版局  苏ICP备1502128</p>
+                <p>技术支持：江苏泽本信息有限公司</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

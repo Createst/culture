@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>忘记密码</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/forget/forgetpsw.css"/>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid" style="min-width: 1190px;padding: 0px;">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="register-box">
+                <div class="center-block register-top">
+                    <div class="col-xs-1">
+                        <a href="#"><img src="images/logo.jpg"/></a>
+                    </div>
+                    <div class="col-xs-6">
+                        <span>镇江市文化馆数字化互动平台</span>
+                    </div>
+                    <div class="col-xs-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="height: 548px;">
+        <div class="col-xs-12">
+            <div class="center-block register-center" id="findpsw1">
+
+                <div class="find-img ">
+                    <img src="images/forget1.png">
+                </div>
+
+
+                <div class="form-group row register-input" >
+                    <label for="username" class="col-xs-4 control-label">手机号：</label>
+                    <div class="col-xs-4 username" style="padding: 0px;">
+                        <input class="form-control" id="username" name="username"
+                               placeholder="请填写11位有效的手机号" />
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="pswinfo"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row register-input">
+                    <label for="yan" class="col-xs-4 control-label">验证码：</label>
+                    <div class="col-xs-2  yan" style="padding: 0px;">
+                        <input class="form-control" id="yan" name="yan"
+                               placeholder="请输入验证码"
+                               type="text"/>
+                    </div>
+                    <div class="col-xs-2">
+                        <button class="btn btn-default" id="scode">发送验证码</button>
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="pswinfo"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-4">
+                        <button   class="btn btn-primary register-submit" onclick="isnull();">提交</button>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-4">
+                        <p class="text-danger text-center alertinfo">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------->
+            <div class="center-block register-center" id="findpsw2">
+                <div class="find-img">
+                    <img src="images/forget2.png">
+                </div>
+
+                <input type="hidden" name="username" class="hiddenname" >
+                <div class="form-group row register-input">
+                    <label for="password" class="col-xs-4 control-label">密码：</label>
+                    <div class="col-xs-4 password" style="padding: 0px;">
+                        <input class="form-control" id="password" name="password"
+                               placeholder="请输入密码"
+                               type="password"/>
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="pswinfo">6-20位，数字、字母、下划线组合</span>
+                    </div>
+                </div>
+
+                <div class="form-group row register-input">
+                    <label for="passwordagain" class="col-xs-4 control-label">确认密码：</label>
+                    <div class="col-xs-4 passwordagain" style="padding: 0px;">
+                        <input class="form-control" id="passwordagain" name="passwordagain"
+                               value="" placeholder="请确认密码"
+                               type="password" />
+                    </div>
+                    <div class="col-xs-3">
+                        <span class="pswinfo"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                        <button  class="btn btn-primary register-submit" onclick="isnullagin();">提交</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-4">
+                        <p  class="text-danger text-center alertinfo2">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-------------------------------------------------------------->
+            <div class="center-block register-center" id="findpsw3">
+                <div class="find-img">
+                    <img src="images/forget3.png">
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-5">
+                        <p  class="text-center" style="font-size: 24px;font-weight: bold;">
+                            <img src="images/ico_login_succeed.png"/>
+                            恭喜，密码重置成功！<a href="#">立即登录</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<%&#45;&#45;底部&#45;&#45;%>-->
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="footer2" class="text-center">
+                <p><a href="#">关于我们</a> |<a href="#"> 联系方式</a> | <a href="#">常见问题</a></p>
+                <p>版权所有：镇江市文化广电新闻出版局  苏ICP备1502128</p>
+                <p>技术支持：江苏泽本信息有限公司</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/forgetpsw.js"></script>
+</body>
+</html>
